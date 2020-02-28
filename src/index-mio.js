@@ -1,9 +1,14 @@
 import { Welcome } from './components/Welcome.js';
 import { Tarjeta, BlogPost } from './tarea/Tarea1.js';
+import { MatchNombre } from './tarea/Tarea2.js';
 
 const myApp = document.getElementById('react-app');
-const autor = 
 
+
+
+ReactDOM.render(<MatchNombre value="tetas" />, myApp)
+
+/* ESTA ES LA TAREA 1 
 ReactDOM.render(<BlogPost
     titulo="Sentado en la esquina"
     parrafos={`Sentado en la esquina, pienso cómo fui tan gil.
@@ -13,7 +18,7 @@ ReactDOM.render(<BlogPost
     titulo:"Capo",
       imagen: 'https://avatars0.githubusercontent.com/u/23346287?s=400&v=4',
       }}/> , myApp)
-
+*/
 // import { Button } from './components/Button.js';
 
 // ReactDOM.render(
