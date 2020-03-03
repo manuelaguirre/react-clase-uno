@@ -13,19 +13,11 @@
  */
 
 export function MatchNombre(props) {
-
     const [value, setValue] = React.useState("");
-    
     function changeHandler(event){
-        
         setValue(event.target.value)
     }
-
-
-    return (<div> <input onChange = {changeHandler} className = {value == props.nombre ? "input" : "input input-match"} /> </div>)
-         
-       
- 
+    return (<div> <input onChange = {changeHandler} className = {value == props.nombre ? "input" : "input input-match"} /> </div>) 
 }
 
 
@@ -49,13 +41,10 @@ export function MatchNombre(props) {
  */
 
 export function PasswordInput(props) {
-
     const [value, setValue] = React.useState("");
-    
     function changeHandler(event){
         setValue(event.target.value)
     }
-
     return <input type="password" onChange={changeHandler} className = {value.length <= parseInt(props.minLength) && "input-match"}></input>
 }
 
@@ -86,9 +75,7 @@ export function PasswordInput(props) {
  */
 
 export function ValidationInput(props) {const [value, setValue] = React.useState("");
-    
 function changeHandler(event){
     setValue(event.target.value)
 }
-
 return <input type={props.isPassword ? "password" : "text"} onChange={changeHandler} className = {props.validation(value) ? "input" : "input input-match"}></input>}

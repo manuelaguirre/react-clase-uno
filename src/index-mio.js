@@ -1,12 +1,20 @@
 import { Welcome } from './components/Welcome.js';
 import { Tarjeta, BlogPost } from './tarea/Tarea1.js';
 import { MatchNombre, PasswordInput, ValidationInput } from './tarea/Tarea2.js';
+import { UncontrolledCheckbox, CheckboxList } from './tarea/Tarea3.js';
 
 const myApp = document.getElementById('react-app');
 const validateEmail = (value) => value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
 const validateMinLength = (value) => value.length >= 8
 
-ReactDOM.render(<React.Fragment><ValidationInput  validation={validateEmail}/><ValidationInput  isPassword validation={validateMinLength}/></React.Fragment>, myApp)
+ReactDOM.render(<React.Fragment><CheckboxList items={
+ { uno: true,
+  dos: false,
+  tres: true,} 
+}/><UncontrolledCheckbox name = "caca" initialValue = {true} ></UncontrolledCheckbox></React.Fragment>, myApp)
+
+
+
 
 /* ESTA ES LA TAREA 1 
 ReactDOM.render(<BlogPost
@@ -46,3 +54,4 @@ ReactDOM.render(<BlogPost
 // import { ToDoList } from './components/ToDoList.js';
 
 // ReactDOM.render(<ToDoList />, document.getElementById('react-app'));
+
