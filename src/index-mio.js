@@ -15,7 +15,7 @@ const items = {
      tres: true,
    }
 
-ReactDOM.render(<React.Fragment><CheckboxListWithState items = {items} ></CheckboxListWithState></React.Fragment>, myApp)
+ReactDOM.render(<CheckboxListWithState items = {items} ></CheckboxListWithState>, myApp)
 
 
 

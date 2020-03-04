@@ -34,12 +34,9 @@ export function ControlledCheckbox(props) {
 export function CheckboxListWithState(props) {
 
     const [state,setState] = React.useState(props.items)
-    console.log(state);
     const itemKeys = Object.keys(props.items);
-    console.log(itemKeys);
     return  (itemKeys.map((key) => <React.Fragment key={key} ><ControlledCheckbox name={key} value = {state[key]} onChange={
-        (event) => {setState({...state, [key]: !state[key] });
-    console.log(state)}
+        (event) => setState({...state, [key]: !state[key] })
     } /></React.Fragment>))
 
 }
